@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# CRUD APP PROJECT
+![VİEW GİF](crud-app-project.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# USED TECHNOLOGİES
+- BOOTSTRAP
+- CSS
+- REACT
+- Toastify(notification library)
 
-## Available Scripts
+# THE GOAL OF THE PROJECT
+- My first react project was designed to record the books we read in daily life by specifying the day and time, to be able to update them when necessary, and to cross and mark when the books are read `:)`
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# CRUD APP 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Create Read Update Delete (Oluştur Oku Düzenle Sil)
 
-### `npm test`
+* Form içerisinden kitap ismini al
+* - Eğer ki kitap ismi girilmişse:
+* - Ekle butonuna tıklanılınca kitap ismiyle yeni bir obje oluştur
+* - Ekleme tarihi | Kitap ismi | id | okunduMu
+* - Oluşan objeyi kitapların tümünü tuttuğumuz state'e aktar
+* - İnputu temizle
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+* `books`  state'inde tutulan kitapları al ve ekrana bas
+* - Eğer state boş ise "Henüz Kitap Eklenmedi " ekrana bas
+* - Dizideki her bir kitap için ekrana `BookCard` bileşeni bas
+* - `BookCard` bileşenine prop olarak ekrana basılcak olan kartın bilgilerini aktar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*  Kitap Silme Butonu:
+* - Herhangi bir kitabın sil butonuna basıldığında fonksiyonu çalıştır
+* - fonksiyona silinecek kitabın id sini gönder
+* - bu fonksiyon modal 'ı açsın
+* - ve modal'a silinecek id yi gönder 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+* Okundu İşaretleme Butonu:
+* - Okundu butonuna tıklanılınca fonksiyonu çalıştır.
+* - Bu fonksiyona  kitabın tüm değerlerini gönder
+* - Kitabın isRead değerini tersine çevir
+* - State'i güncelle
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Düzenleme Butonu :
+* - Düzenle butonuna basıldığında fonksiyon çalışsın
+* - Fonksiyon modal'ı açsın ve düzenlenecek elemanı state'aktarsın
+* - Düzenlenecek elemanın  ismi modalda input alanına gelsin(prop gönder)
+* - İnput değişiğinde düzenlenecek elemanın title'ını değiştir
+* - vazgeç' e tıklarsa modal'ı kapat
+* - kaydet'i tıklarsa düzenlenecek elemanı `books` state'e aktar ve fonksiyonu çalıştır.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
